@@ -1,0 +1,201 @@
+body {
+  background-color: #0099cc;
+
+}
+
+.vAccordion--default {
+  padding-top: 80px;
+}
+
+v-pane-header {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+
+.header h1{
+  padding-left: 9%;
+  text-align: center;
+  width: 100%;
+  font-size: 4em;
+}
+
+.header img:hover{
+  cursor: pointer;
+}
+
+.header img {
+  height: 50px;
+  width: 50px;
+}
+
+.links {
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links img{
+  margin-left: 15px;
+  height: 50px;
+  width: 50px;
+}
+
+.email .emailText{
+  visibility: hidden;
+  width: auto;
+  font-size: .8em;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.email:hover .emailText{
+  visibility: visible;
+}
+
+
+.github .githubText{
+  visibility: hidden;
+  width: auto;
+  font-size: .8em;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.github:hover .githubText{
+  visibility: visible;
+}
+
+.linkedIn .linkedInText{
+  visibility: hidden;
+  width: auto;
+  font-size: .8em;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.linkedIn:hover .linkedInText{
+  visibility: visible;
+}
+
+ .mypic{
+   visibility: hidden;
+   width: auto;
+   font-size: .8em;
+   background-color: black;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 5px;
+
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+}
+
+header h1:hover .mypic{
+  visibility: visible;
+}
+
+.frontend{
+  background-color: #006699;
+}
+
+.backend{
+  background-color: #006699;
+}
+
+
+.inneraccordian {
+  display: inline-flex;
+  text-align: justify;
+  justify-content:space-around;
+  padding: 5px;
+  margin: 2px;
+  width: 1000px;
+  color:white;
+}
+.aboutme{
+  background-color: #0099cc;
+  color:white;
+  font-size: 20px;
+}
+
+.school{
+  background-color: #006699;
+  color:white;
+  font-size: 20px;
+}
+
+.skillacc{
+  /*background-color: #0099cc;*/
+  width: auto
+}
+
+.projects{
+  background-color: #006699;
+  color:white;
+  font-size: 20px;
+}
+
+.skills{
+  color:white;
+  justify-content: space-around;
+  font-size: 20px;
+
+}
+
+
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  justify-content: space-around;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
