@@ -23,146 +23,187 @@
 
   </head>
   <body>
-<div class="container">
+    <div class="container">
 
-    <div class="header" ng-controller="homeController">
-    <div class="email">
-      <a href='mailto:andrew.gonzalez@hotmail.com'><img src="./client/assets/envelope-icon.png" alt="email"></a>
-      <span class="emailText">Andrew.Gonzalez@Hotmail.com</span>
+      <div class="header" ng-controller="homeController">
+        <div class="email">
+          <a href='mailto:andrew.gonzalez@hotmail.com'><img src="./client/assets/envelope-icon.png" alt="email"></a>
+          <span class="emailText">Andrew.Gonzalez@Hotmail.com</span>
+        </div>
+        <div class="typewriter me">
+          <h1>Andrew Gonzalez</h1><span class="mypic">
+            <img src="./client/assets/thumbnail_Linkedin_Pro.jpg" alt="photo">
+          </span>
+        </div>
+        <div class="links">
+          <div class="github">
+            <img ng-click='github()' src="./client/assets/GitHub.png" alt="GitHub">
+            <span class="githubText">Visit my GitHub</span>
+          </div>
+          <div class="linkedIn">
+            <img ng-click='linkedIn()' src="./client/assets/LinkedIn.png" alt="LinkedIn">
+            <span class="linkedInText">Vist my LinkedIn</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mainBody">
+
+
+
+        <v-accordion class="vAccordion--default" >
+
+          <!-- add expanded attribute to open the section -->
+          <v-pane expanded class='aboutme roundCorners centerText'>
+            <v-pane-header>
+              About Me
+            </v-pane-header>
+
+            <v-pane-content>
+              The thing I enjoy about coding is designing something and
+              watching it come to life. From the positioning of buttons and title and
+              use of color to functionality and making things easier on the user. I take
+              pride in my work and am great at problem solving. I'm a freelance
+              front-end web developer based in Los Angeles. I develop responsive,
+              high-performance websites using HTML5/CSS, Javascript, Python, AngularJs
+              and Ruby on Rails.
+            </v-pane-content>
+          </v-pane>
+
+          <v-pane class='school roundCorners centerText'>
+            <v-pane-header>
+              School
+            </v-pane-header>
+
+            <v-pane-content>
+              Attended: Coding Dojo <br>
+              Graduated: 3 Black  <br>
+              Certicficate of Completion in Web Development <br>
+            </v-pane-content>
+          </v-pane>
+        <div class="skillacc roundCorners">
+          <v-pane class='skills roundCorners '>
+            <v-pane-header>
+              Skills
+            </v-pane-header>
+              <v-pane-content>
+
+                <div class="skills2 roundCorners">
+                  <div class="frontEnd roundCorners ">
+                    <h3>Front End Skills</h3>
+                    <ul>
+                      <li>AngularJS</li>
+                      <li>HTML5</li>
+                      <li>CSS</li>
+                      <li>JQuery</li>
+                      <li>Javascript</li>
+                      <li>Ruby on rails</li>
+                      <li>Python (Flask and Django)</li>
+                    </ul>
+                  </div>
+
+                  <div class="backEnd roundCorners">
+                    <h3>Back End Skills</h3>
+                    <ul>
+                      <li>MongoDB</li>
+                      <li>PostgreSQL</li>
+                      <li>MySQL</li>
+                      <li>NodeJS</li>
+                      <li>Express</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+
+                <!-- <v-accordion class="inneraccordian">
+                  <v-pane class='frontend'>
+                    <v-pane-header>
+                      Front End Skills
+                    </v-pane-header>
+                    <v-pane-content>
+                      <ul style="list-style: none;">
+                      <li>AngularJS</li>
+                      <li>HTML5</li>
+                      <li>CSS</li>
+                      <li>JQuery</li>
+                      <li>Javascript</li>
+                      <li>Ruby on rails</li>
+                      <li>Python (Flask and Django)</li>
+                    </ul>
+                    </v-pane-content>
+                  </v-pane>
+
+                  <v-pane class='backend'>
+                    <v-pane-header>
+                      Back-End Skills
+                    </v-pane-header>
+                    <v-pane-content>
+                      <ul style="list-style: none;">
+                      <li>MongoDB</li>
+                      <li>PostgreSQL</li>
+                      <li>MySQL</li>
+                      <li>NodeJS</li>
+                      <li>Express</li>
+                    </ul>
+                    </v-pane-content>
+                  </v-pane>
+                </v-accordion> -->
+            </v-pane-content>
+          </v-pane>
+        </div>
+          <v-pane class='projects roundCorners centerText'>
+            <v-pane-header>
+              Projects
+            </v-pane-header>
+
+            <v-pane-content>
+              These are some of the projects that are completed and some that are still under contruction.
+              <v-accordion id="nestedAccordionA">
+                <v-pane >
+                  <v-pane-header>
+                    StreetChowMean
+                  </v-pane-header>
+                  <v-pane-content>
+                    Content was built with a MongoDB, NodeJS, Express and AngularJS front end. GoogleMaps API was implemented to make sure address entered was correct and to gather distance from person to place.
+                  </v-pane-content>
+                </v-pane>
+
+                <v-pane class='projects2'>
+                  <v-pane-header>
+                    Mxtransportation.com
+                  </v-pane-header>
+                  <v-pane-content>
+                    Designed website and was built with Wordpress and an angulaJS plug in. Site was designed along with owner.
+                  </v-pane-content>
+                </v-pane>
+                <v-pane>
+                <v-pane-header>
+                  Westcoast Kustom Rigz
+                </v-pane-header>
+                <v-pane-content>
+                  Designed website and is currently being built with Shopify and pages are customized to owners liking using custom ruby on rails code.
+                </v-pane-content>
+              </v-pane>
+              </v-accordion>
+
+            </v-pane-content>
+          </v-pane>
+        </v-pane>
+
+        </v-accordion>
+      </div>
+
     </div>
-      <div class="typewriter">
-    <h1>Andrew Gonzalez</h1><img class="mypic" src="./client/assets/thumbnail_Linkedin_Pro.jpg" alt="photo">
-      </div>
-    <div class="links">
-      <div class="github">
-        <img ng-click='github()' src="./client/assets/GitHub.png" alt="GitHub">
-        <span class="githubText">Visit my GitHub</span>
-      </div>
-      <div class="linkedIn">
-        <img ng-click='linkedIn()' src="./client/assets/LinkedIn.png" alt="LinkedIn">
-        <span class="linkedInText">Vist my LinkedIn</span>
-      </div>
+
+  <!-- <div class="mask fadeOut">
+    <div class="innerMask">
+
+      <p>Hello World!!!</p>
     </div>
-  </div>
 
-
-<v-accordion class="vAccordion--default" >
-
-  <!-- add expanded attribute to open the section -->
-  <v-pane expanded class='aboutme'>
-    <v-pane-header>
-      About Me
-    </v-pane-header>
-
-    <v-pane-content>
-      <span>   The thing I enjoy about coding is designing something and
-        watching it come to life. From the positioning of buttons and title and
-        use of color to functionality and making things easier on the user. I take
-        pride in my work and am great at problem solving. I'm a freelance
-        front-end web developer based in Los Angeles. I develop responsive,
-        high-performance websites using HTML5/CSS, Javascript, Python, AngularJs
-        and Ruby on Rails.
-    </span>
-    </v-pane-content>
-  </v-pane>
-
-  <v-pane class='school'>
-    <v-pane-header>
-      School
-    </v-pane-header>
-
-    <v-pane-content>
-      Attended: Coding Dojo <br>
-      Graduated: 3 Black  <br>
-      Certicficate of Completion in Web Development <br>
-    </v-pane-content>
-  </v-pane>
-<div class="skillacc">
-  <v-pane class='skills'>
-    <v-pane-header>
-      Skills
-    </v-pane-header>
-          <v-pane-content>
-      <v-accordion class="inneraccordian">
-        <v-pane class='frontend'>
-          <v-pane-header>
-            Front End Skills
-          </v-pane-header>
-          <v-pane-content>
-            <ul style="list-style: none;">
-            <li>AngularJS</li>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>JQuery</li>
-            <li>Javascript</li>
-            <li>Ruby on rails</li>
-            <li>Python (Flask and Django)</li>
-          </ul>
-          </v-pane-content>
-        </v-pane>
-
-        <v-pane class='backend'>
-          <v-pane-header>
-            Back-End Skills
-          </v-pane-header>
-          <v-pane-content>
-            <ul style="list-style: none;">
-            <li>MongoDB</li>
-            <li>PostgreSQL</li>
-            <li>MySQL</li>
-            <li>NodeJS</li>
-            <li>Express</li>
-          </ul>
-          </v-pane-content>
-        </v-pane>
-      </v-accordion>
-    </v-pane-content>
-  </v-pane>
-</div>
-  <v-pane class='projects'>
-    <v-pane-header>
-      Projects
-    </v-pane-header>
-
-    <v-pane-content>
-      These are some of the projects that are completed and some that are still under contruction.
-      <v-accordion id="nestedAccordionA">
-        <v-pane >
-          <v-pane-header>
-            StreetChowMean
-          </v-pane-header>
-          <v-pane-content>
-            Content was built with a MongoDB, NodeJS, Express and AngularJS front end. GoogleMaps API was implemented to make sure address entered was correct and to gather distance from person to place.
-          </v-pane-content>
-        </v-pane>
-
-        <v-pane class='projects2'>
-          <v-pane-header>
-            Mxtransportation.com
-          </v-pane-header>
-          <v-pane-content>
-            Designed website and was built with Wordpress and an angulaJS plug in. Site was designed along with owner.
-          </v-pane-content>
-        </v-pane>
-        <v-pane>
-        <v-pane-header>
-          Westcoast Kustom Rigz
-        </v-pane-header>
-        <v-pane-content>
-          Designed website and is currently being built with Shopify and pages are customized to owners liking using custom ruby on rails code.
-        </v-pane-content>
-      </v-pane>
-      </v-accordion>
-
-    </v-pane-content>
-  </v-pane>
-</v-pane>
-
-</v-accordion>
-
-</div>
-
-
+  </div> -->
 
   </body>
 </html>

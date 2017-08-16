@@ -1,7 +1,85 @@
 body {
-  background-color: #0099cc;
+  /*background-color: #0099cc;
+  border-radius: 153px 10px 200px 10px;
+  -moz-border-radius: 153px 10px 200px 10px;
+  -webkit-border-radius: 153px 10px 200px 10px;
+  border: 30px solid #000000;*/
+
+  background: rgba(43,76,111,1);
+  background: -moz-linear-gradient(top, rgba(43,76,111,1) 0%, rgba(170,125,57,1) 50%, rgba(43,76,111,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(43,76,111,1)), color-stop(50%, rgba(170,125,57,1)), color-stop(100%, rgba(43,76,111,1)));
+  background: -webkit-linear-gradient(top, rgba(43,76,111,1) 0%, rgba(170,125,57,1) 50%, rgba(43,76,111,1) 100%);
+  background: -o-linear-gradient(top, rgba(43,76,111,1) 0%, rgba(170,125,57,1) 50%, rgba(43,76,111,1) 100%);
+  background: -ms-linear-gradient(top, rgba(43,76,111,1) 0%, rgba(170,125,57,1) 50%, rgba(43,76,111,1) 100%);
+  background: linear-gradient(to bottom, rgba(43,76,111,1) 0%, rgba(170,125,57,1) 50%, rgba(43,76,111,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b4c6f', endColorstr='#2b4c6f', GradientType=0 );
 
 }
+
+.mask{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation-duration: 1s;animation-duration: 4s;
+  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+ }
+
+@-webkit-keyframes fadeOut {
+  /*100% {visibility: hidden;}*/
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+  0% {visibility: visible;}
+  100% {visibility: hidden;}
+ }
+
+ @keyframes fadeOut {
+  /*100% {visibility: hidden;}*/
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+  0% {visibility: visible;}
+  100% {visibility: hidden;}
+ }
+
+ .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+ }
+
+
+.mask p{
+  color: #fff;
+  font-size: 2em;
+  font-family: Courier;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  justify-content: space-around;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation:
+    mytyping 2.5s steps(30, end),
+    my-blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes mytyping {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes my-blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+
 
 .vAccordion--default {
   padding-top: 80px;
@@ -61,10 +139,13 @@ v-pane-header {
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
 
 .email:hover .emailText{
   visibility: visible;
+  opacity: 1;
 }
 
 
@@ -81,10 +162,13 @@ v-pane-header {
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
 
 .github:hover .githubText{
   visibility: visible;
+  opacity: 1;
 }
 
 .linkedIn .linkedInText{
@@ -100,57 +184,89 @@ v-pane-header {
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
 
 .linkedIn:hover .linkedInText{
   visibility: visible;
+  opacity: 1;
 }
 
- .mypic{
-   visibility: hidden;
-   width: auto;
-   font-size: .8em;
-   background-color: black;
-   color: #fff;
-   text-align: center;
-   border-radius: 6px;
-   padding: 5px 5px;
-
-   /* Position the tooltip */
-   position: absolute;
-   z-index: 1;
+.mypic{
 }
 
-header h1:hover .mypic{
+.typewriter .mypic{
+ visibility: hidden;
+
+ background-color: black;
+
+ border-radius: 6px;
+
+
+ /* Position the tooltip */
+ position: absolute;
+ z-index: 1;
+ opacity: 0;
+ transition: opacity 1.5s;
+}
+
+.me:hover .mypic{
   visibility: visible;
+  /*background-image: url('./client/assets/thumbnail_Linkedin_Pro.jpg');*/
+  left: 45%;
+  opacity: 1;
 }
 
-.frontend{
-  background-color: #006699;
-}
 
-.backend{
-  background-color: #006699;
+v-pane-header {
+  margin-right: 5px;
 }
 
 
 .inneraccordian {
-  display: inline-flex;
-  text-align: justify;
-  justify-content:space-around;
+  display: flex;
+  justify-content: space-around;
   padding: 5px;
   margin: 2px;
-  width: 1000px;
   color:white;
 }
+
+.skills2{
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  margin: 2px;
+  color:white;
+}
+
+
+
+.frontend, .frontEnd, .backend, .backEnd{
+  width: 35%;
+  /*border: 5px solid black;*/
+  /*background-color: #1f3b08;*/
+}
+
+.frontEnd h3, .backEnd h3{
+  text-align: center;
+  text-decoration: underline;
+  font-weight: lighter;
+  font-size: 1.3em;
+}
+
+.frontEnd li, .backEnd li{
+  list-style: none;
+}
+
 .aboutme{
-  background-color: #0099cc;
+  /*background-color: #1f3b08;*/
   color:white;
   font-size: 20px;
 }
 
 .school{
-  background-color: #006699;
+  /*background-color: #1f3b08;*/
   color:white;
   font-size: 20px;
 }
@@ -161,7 +277,7 @@ header h1:hover .mypic{
 }
 
 .projects{
-  background-color: #006699;
+  /*background-color: #1f3b08;*/
   color:white;
   font-size: 20px;
 }
@@ -178,24 +294,27 @@ header h1:hover .mypic{
   color: #fff;
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
+  /*border-right: .15em solid orange; /* The typwriter cursor */*/
   white-space: nowrap; /* Keeps the content on a single line */
   justify-content: space-around;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .10em; /* Adjust as needed */
-  animation:
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+
+.mainBody {
+  margin: 5%;
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white }
+
+.roundCorners {
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+
+.centerText {
+  text-align: center;
 }
